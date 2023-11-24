@@ -40,7 +40,9 @@ if (window.location.href == 'http://127.0.0.1:5500/index.html') {
             // console.log(col[i].firstChild.firstChild.nextSibling.firstChild.textContent)
             let urunAdi = col[i].firstChild.firstChild.nextSibling.firstChild.textContent.toLowerCase()
 
-            if (urunAdi.indexOf(kullaniciDeger) != -1){
+            let urunAciklama = col[i].firstChild.firstChild.nextSibling.firstChild.nextSibling.textContent.toLowerCase()
+
+            if (urunAdi.indexOf(kullaniciDeger) != -1 || urunAciklama.indexOf(kullaniciDeger)!= -1) {
                 col[i].style.display = "flex"
             } else {
                 col[i].style.display = "none"
